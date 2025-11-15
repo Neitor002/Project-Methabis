@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>METHABIS</title>
+  <link rel="icon" href="Logos/Icono.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #cddef1;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1 {
+      color: #ef1616;
+      text-align: center;
+      margin: 20px 10px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .menu {
+      background-color: #a3c9f5;
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      color: purple;
+      font-weight: 600;
+      transition: color 0.4s;
+    }
+
+    .menu ul li a:hover {
+      color: whitesmoke;
+    }
+
+    .slideshow-container {
+      max-width: 50%;
+      position: relative;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .slides { display: none; width: 100%; }
+    .slides.active { display: block; animation: fade 2.5s; }
+
+    @keyframes fade {
+      from { opacity: 0.4 }
+      to { opacity: 1 }
+    }
+
+    .gallery-container {
+      max-width: 80%;
+      margin: 30px auto;
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gallery-container img {
+      max-width: 100%;
+      height: auto;
+      display: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      object-fit: contain;
+    }
+
+    .gallery-container img.active { display: block; }
+
+    .gallery-buttons {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .gallery-buttons button {
+      cursor: pointer;
+      padding: 8px 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 20px;
+      background: skyblue;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s, transform 0.5s;
+    }
+
+    .gallery-buttons button:hover {
+      background: purple;
+      transform: scale(1.05);
+    }
+
+    .gallery-buttons button.active {
+      background: #577ca7;
+    }
+
+    /* Botón centrado para PDFs */
+    .pdf-btn-container {
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      display: none;
+    }
+
+    .pdf-btn {
+      background: linear-gradient(135deg, #00c4cc, #7d2ae8);
+      color: white;
+      text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pdf-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
+    footer {
+      background: #a3c9f5;
+      color: whitesmoke;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    .social-icons a img {
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.2);
+    }
+
+    footer a {
+      color: purple;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 1.5rem; }
+      .menu ul li { display: block; margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slideshow-container" id="banner-slideshow"> 
+    <img src="Banners/Banners.jpg" class="slides active" alt="Banner 1">
+    <img src="Banners/Banner 3.jpg" class="slides" alt="Banner 2">
+    <img src="Banners/Banner-2.jpg" class="slides" alt="Banner 3">
+    <img src="Banners/Banner 4.jpg" class="slides" alt="Banner 4">
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Methabis.html">METHABIS</a></li>
+      <li><a href="Imagen-Corp.html">Imagen Corporativa</a></li>
+      <li><a href="Contenidos.html">Contenidos</a></li>
+      <li><a href="Quienes-somos.html">¿Quienes Somos?</a></li>
+    </ul>
+  </div>
+
+  <div class="gallery-container">
+    <img src="Marcos/Logotipo.jpg" class="gallery active">
+    <img src="Marcos/Personaje.jpg" class="gallery">
+    <img src="Marcos/Proceso.jpg" class="gallery">
+    <img src="Marcos/Vision.jpg" class="gallery">
+    <img src="Marcos/Mision.jpg" class="gallery">
+    <img src="Marcos/Eslogan.jpg" class="gallery">
+    <img src="Marcos/Valores.jpg" class="gallery">
+    <img src="Marcos/Colores.jpg" class="gallery">
+    <img src="Marcos/Manual.jpg" class="gallery">
+    <img src="Marcos/Infografia.jpg" class="gallery">
+
+    <!-- Botones PDF -->
+    <div id="manual-btn" class="pdf-btn-container">
+      <a class="pdf-btn" href="Marcos/Manual.pdf" target="_blank">Abrir Manual de Imagen</a>
+    </div>
+
+    <div id="info-btn" class="pdf-btn-container">
+      <a class="pdf-btn" href="Marcos/Info.pdf" target="_blank">Abrir Infografía</a>
+    </div>
+  </div>
+
+  <div class="gallery-buttons">
+    <button onclick="mostrarImagen(0)">Logotipo</button>
+    <button onclick="mostrarImagen(1)">Personaje</button>
+    <button onclick="mostrarImagen(2)">Proceso</button>
+    <button onclick="mostrarImagen(3)">Visión</button>
+    <button onclick="mostrarImagen(4)">Misión</button>
+    <button onclick="mostrarImagen(5)">Eslogan</button>
+    <button onclick="mostrarImagen(6)">Valores</button>
+    <button onclick="mostrarImagen(7)">Colores Corporativos</button>
+    <button onclick="mostrarImagen(8)">Manual de imagen</button>
+    <button onclick="mostrarImagen(9)">Infografía</button>
+  </div>
+
+  <script>
+    function iniciarSlideshow(containerId, intervalo) {
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(`#${containerId} .slides`);
+      function showSlides() {
+        slides.forEach(slide => slide.style.display = "none");
+        slideIndex++;
+        if (slideIndex > slides.length) slideIndex = 1;
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, intervalo);
+      }
+      showSlides();
+    }
+    iniciarSlideshow("banner-slideshow", 3000);
+
+    const galleryImages = document.querySelectorAll(".gallery");
+    const galleryBtns = document.querySelectorAll(".gallery-buttons button");
+    const manualBtn = document.getElementById("manual-btn");
+    const infoBtn = document.getElementById("info-btn");
+
+    function mostrarImagen(n) {
+      galleryImages.forEach(img => img.classList.remove("active"));
+      galleryBtns.forEach(btn => btn.classList.remove("active"));
+      galleryImages[n].classList.add("active");
+      galleryBtns[n].classList.add("active");
+
+      manualBtn.style.display = n === 8 ? "block" : "none";
+      infoBtn.style.display = n === 9 ? "block" : "none";
+    }
+
+    galleryBtns[0].classList.add("active");
+  </script>
+
+  <footer>
+    <p>Conoce más de nosotros ¡Visita nuestras Redes Sociales!</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61580264585974"><img src="Logos/facebook.png" width="50" height="50"></a>
+      <a href="https://www.instagram.com/methabis_2025/"><img src="Logos/Insta.png" width="50" height="50"></a>
+      <a href="mailto:methabiscorp@gmail.com?subject=Más%20Información"><img src="Logos/gmail.png" width="50" height="50"></a>
+    </div>
+    <br>
+    <p>&copy; 2025 METHABIS - Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

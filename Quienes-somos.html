@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>METHABIS</title>
+  <link rel="icon" href="Logos/Icono.png" type="image/x-icon">
+
+  <!-- Fuente moderna de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #cddef1;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    h1 {
+      color: #ef1616;
+      text-align: center;
+      margin: 20px 10px;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* Menú */
+    .menu {
+      background-color: #a3c9f5;
+      padding: 12px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      color: purple;
+      font-weight: 600;
+      transition: color 0.4s;
+    }
+
+    .menu ul li a:hover {
+      color: whitesmoke;
+    }
+
+    /* Banners (slide automático) */
+    .slideshow-container {
+      max-width: 50%;
+      position: relative;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+    }
+
+    .slides.active {
+      display: block;
+      animation: fade 2.5s;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4 }
+      to { opacity: 1 }
+    }
+
+    /* Contenedor imágenes */
+    .gallery-container {
+      max-width: 80%;
+      margin: 30px auto;
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gallery-container img {
+      max-width: 100%;
+      height: auto;
+      display: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      object-fit: contain;
+    }
+
+    .gallery-container img.active {
+      display: block;
+    }
+
+    /* Botones de selección */
+    .gallery-buttons {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .gallery-buttons button {
+      cursor: pointer;
+      padding: 8px 16px;  /* ancho dinámico */
+      margin: 5px;
+      border: none;
+      border-radius: 20px; /* bordes redondeados */
+      background: skyblue;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.3s, transform 0.5s;
+    }
+
+    .gallery-buttons button:hover {
+      background: purple;
+      transform: scale(1.05);
+    }
+
+    .gallery-buttons button.active {
+      background: #577ca7;
+    }
+
+    /* Footer */
+    footer {
+      background: #a3c9f5;
+      color: whitesmoke;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    .social-icons a img {
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.2);
+    }
+
+    footer a {
+      color: purple;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .menu ul li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Título -->
+  <h1></h1>
+
+  <!-- Slideshow Banners (automático) -->
+  <div class="slideshow-container" id="banner-slideshow"> 
+    <img src="Banners/Banners.jpg" class="slides active" alt="Banner 1">
+    <img src="Banners/Banner 3.jpg" class="slides active" alt="Banner 2">
+    <img src="Banners/Banner-2.jpg" class="slides active" alt="Banner 3">
+    <img src="Banners/Banner 4.jpg" class="slides active" alt="Banner 4">
+  </div>
+
+  <!-- Menú -->
+  <div class="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Methabis.html">METHABIS</a></li>
+      <li><a href="Imagen-Corp.html">Imagen Corporativa</a></li>
+      <li><a href="Contenidos.html">Contenidos</a></li>
+      <li><a href="Quienes-somos.html">¿Quienes Somos?</a></li>
+    </ul>
+  </div>
+
+  <!-- Contenedor de imágenes -->
+  <div class="gallery-container">
+    <img src="Marcos/Redes.jpg" class="gallery active" alt="Imagen 1">
+    <img src="Marcos/Johan-1.jpg" class="gallery" alt="Imagen 2">
+    <img src="Marcos/Johan-2.jpg" class="gallery" alt="Imagen 3">
+    <img src="Marcos/Dayana.jpg" class="gallery" alt="Imagen 4">
+    <img src="Marcos/Dayana-2.jpg" class="gallery" alt="Imagen 5">
+    <img src="Marcos/Revistas.jpg" class="gallery" alt="Imagen 6">
+    <img src="Marcos/Cu.jpg" class="gallery" alt="Imagen 7">
+  </div>
+
+  <!-- Botones de selección directa -->
+  <div class="gallery-buttons">
+    <button onclick="mostrarImagen(0)">Redes Sociales</button>
+    <button onclick="mostrarImagen(1)">Johan Guasca</button>
+    <button onclick="mostrarImagen(2)">Johan Guasca 2</button>
+    <button onclick="mostrarImagen(3)">Dayana Osorio</button>
+    <button onclick="mostrarImagen(4)">Dayana Osorio 2</button>
+    <button onclick="mostrarImagen(5)">Revistas</button>
+    <button onclick="mostrarImagen(6)">Curriculos</button>
+  </div>
+
+  <!-- Script Slides -->
+  <script>
+    // Slideshow automático (banners)
+    function iniciarSlideshow(containerId, intervalo) {
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(`#${containerId} .slides`);
+
+      function showSlides() {
+        slides.forEach(slide => slide.style.display = "none");
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, intervalo);
+      }
+
+      showSlides();
+    }
+
+    iniciarSlideshow("banner-slideshow", 3000);
+
+    // Galería manual con botones directos
+    let galleryIndex = 0;
+    const galleryImages = document.querySelectorAll(".gallery");
+    const galleryBtns = document.querySelectorAll(".gallery-buttons button");
+
+    function mostrarImagen(n) {
+      galleryImages.forEach(img => img.classList.remove("active"));
+      galleryBtns.forEach(btn => btn.classList.remove("active"));
+
+      galleryIndex = (n + galleryImages.length) % galleryImages.length;
+      galleryImages[galleryIndex].classList.add("active");
+      galleryBtns[galleryIndex].classList.add("active");
+    }
+
+    // Inicializar primer botón como activo
+    galleryBtns[0].classList.add("active");
+  </script>
+
+  <!-- Footer -->
+  <footer>
+    <p>Conoce más de nosotros ¡Visita nuestras Redes Sociales!</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61580264585974"><img src="Logos/facebook.png" width="50" height="50" alt="Facebook"></a>
+      <a href="https://www.instagram.com/methabis_2025/"><img src="Logos/Insta.png" width="50" height="50" alt="Instagram"></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=methabiscorp@gmail.com&su=Mas Información&body=Hola, quisiera más información."><img src="Logos/gmail.png" width="50" height="50" alt="Gmail"></a>
+    </div>
+    <br>
+    <p>&copy; 2025 METHABIS - Sitio Web. Todos los derechos reservados. | 
+      <a href="https://www.mintic.gov.co/portal/inicio/Secciones-auxiliares/Politicas/2627:Politicas-de-Privacidad-y-Condiciones-de-Uso">Política de Privacidad</a> | 
+      <a href="https://www.sic.gov.co/politica-privacidad">Términos y Condiciones</a>
+    </p>
+  </footer>
+</body>
+</html>
+
